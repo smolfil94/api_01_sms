@@ -17,7 +17,7 @@ def get_status(user_id):
         'v': '5.92',
         'access_token': access_token
     }
-    status = requests.post(URL, params)
+    status = requests.post(URL, params=params)
     return status.json()['response'][0]['online']  # Верните статус пользователя в ВК
 
 
